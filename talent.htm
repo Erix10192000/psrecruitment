@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>Paradise Soft</title>
+    <link href="all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script src='all.js'></script>
+    <script src='talent.js'></script>
+</head>
+<body>
+    <header>
+        Paradise Software
+    </header>
+    <nav>
+        <div class="block"></div>
+        <div class="list"><a href="home.html" style="color: white;"><i class='material-icons'>home</i>首頁</a></div>
+        <div class="list"><a href="talent.htm" style="color: #ffc612;"><i class='material-icons'>face</i>人才</a></div>
+        <div class="list"><a href="job.htm" style="color: white;"><i class='material-icons'>work</i>職缺</a></div>
+    </nav>
+    <hr>
+    <main>
+        <div class="ctrl-bar">
+            <div id="buttons" style="flex: none;">
+                <button value="all">All</button>
+                <button value="待聯繫">待聯繫</button>
+                <button value="待面試">待面試</button>
+                <button value="審核中">審核中</button>
+                <button value="錄取">錄取</button>
+                <button value="保留">保留</button>
+                <button value="不錄用">不錄用</button>
+                <button value="婉拒">婉拒</button>
+            </div>
+            <div style="flex: auto;"></div>
+            <div style="flex:none;">
+                <form id="select" action="javascript:">
+                    <input type=search id="search-box" placeholder="姓名/電話/信箱">
+                    <button type="submit" id="search-btn"><i class='material-icons'>search</i></button>
+                </form>
+            </div>
+
+            <div style="flex:none;">
+                <button id="add-btn"><i class='material-icons'>add_circle</i></button>
+            </div>
+
+        </div>
+        <ul id="list" data-filter="true">
+        <section class="results">
+        </section>
+        </ul>
+
+        <span id="BackTop" class="toTop">TOP</span> 
+    </main>
+</body>
+</html>

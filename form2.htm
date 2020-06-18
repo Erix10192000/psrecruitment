@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <title>新增職缺</title>
+    <style>
+        body {
+          background-color: #eeeeee;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var SelectBox = document.querySelectorAll('select');
+          M.FormSelect.init(SelectBox);
+          var Chips = document.querySelectorAll('.chips');
+          chip = M.Chips.init(Chips);
+      });
+    
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://script.google.com/macros/s/AKfycby4j1EueqobGj79wb_wExbIF3ynB84TjD3TXdpG78o/dev" method="POST">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix teal-text text-darken-1">business</i>
+                    <select id="dep" name="depart">
+                        <option disabled selected>請選擇部門</option>
+                        <option value="WEB開發部">WEB開發部</option>
+                        <option value="遊戲開發部">遊戲開發部</option>
+                        <option value="APP開發部">APP開發部</option>
+                        <option value="美術設計部">美術設計部</option>
+                        <option value="資訊開發部">資訊開發部</option>
+                        <option value="集成開發部">集成開發部</option>
+                        <option value="運維DBA">運維DBA</option>
+                        <option value="運維IT">運維IT</option>
+                        <option value="運維技術客服">運維技術客服</option>
+                        <option value="平台開發部">平台開發部</option>
+                        <option value="營運部QA">營運部QA</option>
+                        <option value="營運部上架組">營運部上架組</option>
+                        <option value="營運部平台/彩票">營運部平台/彩票</option>
+                        <option value="營運部資訊開發">營運部資訊開發</option>
+                        <option value="行政管理部">行政管理部</option>
+                    </select>
+                    <label></label>
+                </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix teal-text text-darken-1">assignment_ind</i>
+                  <input id="job" type="text" name="job" class="validate">
+                  <label for="job">職稱*</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix teal-text text-darken-1">assignment</i> 
+                  <textarea id="textarea1" class="materialize-textarea" name="jd"></textarea>
+                  <label for="icon_prefix2">工作內容*</label>
+                  <span class="helper-text">ex.可加「必要條件」或「加分條件」</span>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix teal-text text-darken-1">devices</i>
+                    <input id="test" type="text" name="test" class="validate">
+                    <label for="test">是否需測驗/機上考*</label>
+                    <span class="helper-text">如有需測驗，請再詳述時間、方式、流程…等相關細節。</span>
+                </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix teal-text text-darken-1">monetization_on</i>
+                  <input id="salary" type="text" name="salary" class="validate">
+                  <label for="salary">薪資*</label>
+                  <span class="helper-text">月薪或年薪區間</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <p>
+                    <i class="material-icons prefix teal-text text-darken-1">work</i>
+                    <label for="exp" style="font-size: 15px;">資歷*</label>
+                    <label>
+                      <input name="exp" type="radio" value="1年以下"/>
+                      <span>1年以下</span>
+                    </label>
+
+                    <label>
+                      <input name="exp" type="radio" value="2-3年"/>
+                      <span>2-3年</span>
+                    </label>
+
+                    <label>
+                      <input name="exp" type="radio" value="3-5年" />
+                      <span>3-5年</span>
+                    </label>
+
+                    <label>
+                      <input name="exp" type="radio" value="6-10年" />
+                      <span>6-10年</span>
+                    </label>
+                </p>
+                </div>              
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix teal-text text-darken-1">build</i>
+                    <input id="tool" type="text" name="tool" class="validate">
+                    <label for="tool">擅長工具*</label>
+                    <span class="helper-text">ex. 後端：Golang、Java、C/C++、C#.NET、Python、PHP，前端：Html, CSS, JavaScript, Angular…等相關程式語言。</span>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix teal-text text-darken-1">school</i>
+                    <input id="edu" type="text" name="edu" class="validate">
+                    <label for="edu">學歷&科系要求</label>
+                    <span class="helper-text">ex.大學以上、資管資工相關科系畢業。如沒有要求可不填寫。</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix teal-text text-darken-1">g_translate</i>
+                    <input id="language" type="text" name="language" class="validate">
+                    <label for="language">語文條件</label>
+                    <span class="helper-text">ex. 具備英文聽說讀寫中等，如沒有要求可不填寫。</span>
+                </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix teal-text text-darken-1">assignment</i>
+                  <input id="other" type="text" name="other" class="validate">
+                  <label for="other">其他職務條件</label>
+                  <span class="helper-text">ex.必備/加分條件…等。如無要求可不填。</span>
+                </div>
+            </div>
+            <div class="row" style="text-align: right;">
+                <button id="btn" class="waves-effect waves-light btn-small" style="margin-right: 10px;"><i class="material-icons left">send</i>提交</button>
+            </div>
+    </form>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
