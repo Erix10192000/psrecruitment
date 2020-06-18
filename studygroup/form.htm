@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+  <style>
+    body {
+      background-color: #eeeeee;
+    }
+  </style>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var SelectBox = document.querySelectorAll('select');
+          M.FormSelect.init(SelectBox);
+          var Chips = document.querySelectorAll('.chips');
+          chip = M.Chips.init(Chips);
+      });
+
+  </script>
+
+</head>
+<body>
+  <div class="container">
+    <form action="https://script.google.com/macros/s/AKfycbwyfCHW5-ad8Kzk8n5ANUugPM2LRDsiMyuU48VuSWkSyoysS8JE/exec" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix teal-text text-darken-1">account_circle</i>
+            <input id="name" type="text" name="name" class="validate">
+            <label for="name">姓名</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix teal-text text-darken-1">account_circle</i>
+          <input id="age" type="text" name="age" class="validate">
+          <label for="age">年齡</label>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="input-field col s6">
+            <i class="material-icons prefix teal-text text-darken-1">business</i>
+            <select id="dep" name="depart">
+                <option disabled selected>請選擇部門</option>
+                <option value="WEB開發部">WEB開發部</option>
+                <option value="遊戲開發部">遊戲開發部</option>
+                <option value="APP開發部">APP開發部</option>
+                <option value="美術設計部">美術設計部</option>
+                <option value="資訊開發部">資訊開發部</option>
+                <option value="集成開發部">集成開發部</option>
+                <option value="運維DBA">運維DBA</option>
+                <option value="運維IT">運維IT</option>
+                <option value="運維技術客服">運維技術客服</option>
+                <option value="平台開發部">平台開發部</option>
+                <option value="營運部QA">營運部QA</option>
+                <option value="營運部上架組">營運部上架組</option>
+                <option value="營運部平台/彩票">營運部平台/彩票</option>
+                <option value="營運部資訊開發">營運部資訊開發</option>
+                <option value="行政管理部">行政管理部</option>
+            </select>
+            <label></label>
+        </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix teal-text text-darken-1">assignment_ind</i>
+            <input id="job" type="text" name="job" class="validate">
+            <label for="job">職稱</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix teal-text text-darken-1">email</i>    
+            <input id="email" type="email" name="email" class="validate">
+            <label for="email">E-Mail</label>
+        </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix teal-text text-darken-1">phone_iphone</i>    
+            <input id="phone" type="text" name="phone" class="validate">
+            <label for="phone">電話</label>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix teal-text text-darken-1">label</i>    
+            <input id="skill" type="text" name="skill" class="validate">
+            <label for="skill">技能</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix teal-text text-darken-1">mode_edit</i> 
+          <textarea id="textarea1" class="materialize-textarea" name="remarks"></textarea>
+          <label for="icon_prefix2">備註</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix teal-text text-darken-1">work</i>
+            <select id="dep" name="source">
+                <option disabled selected>人才管道</option>
+                <option value="104人力銀行">104人力銀行</option>
+                <option value="CakeResume">CakeResume</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Head Hunter">Head Hunter</option>
+                <option value="員工推薦">員工推薦</option>
+                <option value="Other">其他</option>
+            </select>
+            <label></label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix teal-text text-darken-1">account_circle</i>
+          <input id="rlink" type="text" name="rlink" class="validate">
+          <label for="rlink">履歷連結</label>
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix teal-text text-darken-1">photo</i>
+          <input id="photo" type="text" name="photo" class="validate">
+          <label for="photo">照片</label>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix teal-text text-darken-1">attach_file</i>
+        <input id="resume" type="text" name="resume" class="validate">
+        <label for="resume">履歷</label>
+    </div>
+      </div>
+  
+      <div class="row" style="text-align: right;">
+          <button id="btn" class="waves-effect waves-light btn-small" style="margin-right: 10px;"><i class="material-icons left">add_circle</i>加入人才</button>
+      </div>
+
+    </form>
+</div>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,256 @@
+header{
+    float: left;
+    color:white;font-weight: bold;font-size: 48px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2{
+    color: #ffc621;
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #082f43;
+    color: white;
+    padding: 30px;
+}
+
+nav{
+    color: white;
+    display: flex;
+    height: 2em;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: relative;
+}
+nav>.block{
+    flex: auto;
+}
+nav>.list{
+    flex:none;
+    width: 100px;
+    font-size: 20PX;
+}
+
+.ctrl-bar{
+    color: white;
+    display: flex;
+    height: 3em;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.media{
+    background: #0093a0;
+    border-radius: 5px;
+    float: left;
+    margin: 10px;
+    width: 45%;
+    padding: 10px;
+    height: 200px;
+    position: relative;
+    overflow: auto;
+    box-shadow:  5px 5px 13px #03131b, 
+             -5px -5px 13px #0d4b6b;
+
+}
+.media1{
+    background: #0093a0;
+    border-radius: 10px;
+    float: left;
+    margin: 10px;
+    width: 85%;
+    padding: 10px;
+    height: 120px;
+    position: relative;
+    overflow: auto;
+    box-shadow:  5px 5px 13px #03131b, 
+             -5px -5px 13px #0d4b6b;
+
+}
+
+.media-left{
+    display: table-cell;
+}
+.media-body{
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 20px;
+}
+.media-left > img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    vertical-align: center;
+}
+.dtag{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    background-color: #ffc621;
+    color: white;
+}
+.dlink{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: white;
+    background: #0093a0;
+    box-shadow:  9px 9px 18px #007d88, 
+                 -9px -9px 18px #00a9b8;
+}
+
+.dlink2{
+    margin: 15px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: white;
+    background: #0093a0;
+}
+
+  /* The Modal (background) */
+#bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, .4);
+}
+
+/* Modal Content */
+#content {
+    width: 800px;
+    height: 600px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+}
+
+button{
+	font-size:1em;
+	margin-right:10px;
+	display:block;
+	color:#E9ECEB;
+	padding:10px 25px;
+	background:#9FAFAA;
+	border-radius:20px;
+	border:none;
+	display:inline-block;
+    cursor:pointer;
+    font-family: 'Noto Sans TC', sans-serif;
+    box-shadow:  5px 5px 13px #03131b, 
+    -5px -5px 13px #0d4b6b;
+}
+
+#buttons button:last-child{
+	margin-right:0;
+}
+
+button:focus{
+	outline:none;
+}
+
+#list{
+	margin-right:-20px;
+	padding-top:50px;
+}
+
+#list li{
+	list-style-type:none;
+}
+
+.toTop{
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0;
+    border: 0;
+    border-radius:33% ;
+    opacity: .8;
+    background: #000;
+    color: #f90;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+}
+
+#search-box {
+    font-size: 1em;
+    width: 200px;
+    background: #eeeeee;
+    border-radius: 20px;
+    border: none;
+    margin-right:10px;
+    padding:10px 25px;
+    font-family: 'Noto Sans TC', sans-serif;
+    box-shadow:  5px 5px 13px #03131b, 
+    -5px -5px 13px #0d4b6b;
+}
+
+#search-btn{
+    font-size:1em;
+	margin-right:10px;
+	display:block;
+	color:white;
+	padding:10px 25px;
+	background:#ffc621;
+	border-radius:20px;
+	border:none;
+	display:inline-block;
+    cursor:pointer;
+}
+
+#add-btn{
+    font-size:1em;
+	margin-right:10px;
+	display:block;
+	color:white;
+	padding:10px 25px;
+	background:#f76b61;
+	border-radius:20px;
+	border:none;
+	display:inline-block;
+    cursor:pointer;
+}
+
+.status{
+	font-size:1em;
+	display:block;
+	color:white;
+	padding:5px 15px;
+	background:#f76b61;
+	border-radius:10px;
+	border:none;
+	display:inline-block;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 10px;
+}
+
+label{
+    color: #082f43;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.title{
+    font-size: 24px;
+    color: #ffc621;
+}
+

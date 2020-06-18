@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>Paradise Soft</title>
+    <link href="all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet"> 
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='all.js'></script>
+</head>
+<body>
+    <header>Paradise Software</header>
+    <nav>
+        <div class="block"></div>
+        <div class="list"><a href="home.html" style="color: white;"><i class='material-icons'>home</i>首頁</a></div>
+        <div class="list"><a href="talent.htm" style="color: white;"><i class='material-icons'>face</i>人才</a></div>
+        <div class="list"><a href="job.htm" style="color: #ffc612;"><i class='material-icons'>work</i>職缺</a></div>
+    </nav>
+    <hr>
+    <div class="ctrl-bar">
+        <div id="buttons" style="flex: none;">
+            <button value="all">All</button>
+            <button value="審核中">審核中</button>
+            <button value="人才搜尋">人才搜尋</button>
+            <button value="邀約面試">邀約面試</button>
+            <button value="面試">面試</button>
+            <button value="送簽">送簽</button>
+            <button value="報到">報到</button>
+        </div>
+        <div style="flex: auto;"></div>
+        <div style="flex:none;">
+            <form id="select" action="javascript:">
+                <select id="search-box" name="depart">
+                    <option disabled selected>請選擇部門</option>
+                    <option value="WEB開發部">WEB開發部</option>
+                    <option value="遊戲開發部">遊戲開發部</option>
+                    <option value="APP開發部">APP開發部</option>
+                    <option value="美術設計部">美術設計部</option>
+                    <option value="資訊開發部">資訊開發部</option>
+                    <option value="集成開發部">集成開發部</option>
+                    <option value="運維DBA">運維DBA</option>
+                    <option value="運維IT">運維IT</option>
+                    <option value="運維技術客服">運維技術客服</option>
+                    <option value="平台開發部">平台開發部</option>
+                    <option value="營運部QA">營運部QA</option>
+                    <option value="營運部上架組">營運部上架組</option>
+                    <option value="營運部平台/彩票">營運部平台/彩票</option>
+                    <option value="營運部資訊開發">營運部資訊開發</option>
+                    <option value="行政管理部">行政管理部</option>
+                </select>
+                <button type="submit" id="search-btn"><i class='material-icons'>search</i></button>
+            </form>
+        </div>
+
+        <div style="flex:none;">
+            <button id="add-btn"><i class='material-icons'>add_circle</i></button>
+        </div>        
+    </div>
+
+   
+    <ul id='list' data-filter="true">
+    
+    <section class="results"></section>
+    
+    </ul>
+    
+    <span id="BackTop" class="toTop">TOP</span> 
+    <script src='job.js'></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>Paradise Soft</title>
+    <link href="all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet"> 
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='all.js'></script>
+    
+    <style>
+        table{
+        border-collapse: collapse;
+   	    table-layout: fixed;
+        }
+        td{
+            border-bottom: 1px solid gray;padding: 10px;
+        }
+        tr:nth-child(even){background-color:#92b8be38;}
+    </style>
+    <script>
+        $(function(){
+            var navPos = $('nav').offset().top;
+            $(window).scroll(function(){
+                if($(window).scrollTop()>navPos){
+                    $("nav").css("position","fixed",);
+                    $("nav").css("background","#082f43",);
+                } else {
+                    $("nav").css("position","static",);
+                }
+            });
+        });
+
+        var dataurl = 'https://spreadsheets.google.com/feeds/list/18PqjvE5_hjhXm3h-OjXEXaTgrPlWrDm1O1FwwDt3mYg/3/public/values?alt=json-in-script&callback=?';
+    
+            $.getJSON(dataurl,
+                function(json) {
+                    var e = json.feed.entry,
+                        n = e.length;
+    
+                $(e).each(function() {
+                    $('.results').append('<tr><td width=120px>' + this.gsx$date.$t + '</td>'
+                    + '<td width=80px>' + this.gsx$time.$t + '</td>'
+                    + '<td width=150px>' + this.gsx$depart.$t +'</td>'
+                    + '<td width=300px>' + this.gsx$job.$t + '</td>'
+                    + '<td width=100px>' + this.gsx$name.$t + '</td>'
+                    + '<td width=150px>'+ this.gsx$boss.$t+ '</td>'
+                    + '<td width=150px>' + this.gsx$hr.$t + '</td>'
+                    + '<td width=100px><a class="dlink2" target="_blank" href="https://script.google.com/macros/s/AKfycbwJ2MWWAquVH-XwEuQTrwubgfw-Jz8BDHUO7LDyfDU/dev?id=' + this.gsx$id.$t + '"><i class=material-icons>search</i></a></td></tr>'
+                    
+                    );
+                    });
+                }
+            );
+    </script>
+</head>
+<body>
+    <header>Paradise Software</header>
+    <nav>
+        <div class="block"></div>
+        <div class="list"><a href="home.html" style="color: #ffc612;"><i class='material-icons'>home</i>首頁</a></div>
+        <div class="list"><a href="talent.htm" style="color: white;"><i class='material-icons'>face</i>人才</a></div>
+        <div class="list"><a href="job.htm" style="color: white;"><i class='material-icons'>work</i>職缺</a></div>
+    </nav>
+    <hr>
+    <div style="position: relative;">
+        <h2>近期面試</h2>
+        <table>
+            <thead style="color: #ffc612;">
+                <tr>
+                    <td width=120px>日期</td>
+                    <td width=80px>時間</td>
+                    <td width=150px>部門</td>
+                    <td width=300px>職稱</td>
+                    <td width=100px>姓名</td>
+                    <td width=150px>主管</td>
+                    <td width=150px>人資</td>
+                    <td width=100px>查看</td>
+                </tr>
+            </thead>
+        </table>
+        <table>
+            <tbody>
+            <section class="results"></section>
+            </tbody>
+        </table>
+        
+    </div>
+
+</body>
+</html>
