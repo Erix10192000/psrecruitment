@@ -156,6 +156,11 @@ button{
     -5px -5px 13px #0d4b6b;
 }
 
+#buttons button:hover{
+    background:#ffc621;
+    color:#000;
+}
+
 #buttons button:last-child{
 	margin-right:0;
 }
