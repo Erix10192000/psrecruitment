@@ -8,7 +8,7 @@ $.getJSON(dataurl,
         $(e).each(function() {
             $('.results').append('<li class='+ this.gsx$status.$t +' data-name="' + this.gsx$name.$t + '" data-phone="' + this.gsx$phone.$t + '" data-mail="' + this.gsx$email.$t +'"><div class="media"><div class="media-left"><img src=' 
             + this.gsx$photo.$t + '></img></div><div class="media-body"><h2>' + this.gsx$name.$t +'</h2><p>' +  this.gsx$depart.$t + '  |  ' + this.gsx$job.$t 
-            + '</p><p>面試日期:' + this.gsx$date.$t + this.gsx$time.$t + '</p><span class="dtag">' + this.gsx$createtime.$t + '</span><a class="dlink" target="_blank" href="https://script.google.com/macros/s/AKfycbwJ2MWWAquVH-XwEuQTrwubgfw-Jz8BDHUO7LDyfDU/dev?id=' 
+            + '</p><p>面試日期:' + this.gsx$date.$t + this.gsx$time.$t + '</p><span class="dtag">' + this.gsx$createtime.$t + '</span><a class="dlink" target="_blank" href="https://script.google.com/macros/s/AKfycbyjit5f_W8AiHgpRa8TdyWUZQWNZproLebLV1GbVKGSG2dpOVc/exec?id=' 
             + this.gsx$id.$t+ '"> <i class= material-icons >search</i> </a></div></div></li>');
         });
     }
