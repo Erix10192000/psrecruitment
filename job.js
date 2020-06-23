@@ -14,7 +14,7 @@ $.getJSON(dataurl,
     + '<span><label>測驗</label>' + this.gsx$test.$t + '</span>'
     + '<spanS><label>Contact</label>' + this.gsx$contact.$t + '</span>'
     + '<span><label>HR</label>' + this.gsx$hr.$t + '</span>'
-    + '<a class="dlink" target="_blank" href="https://script.google.com/macros/s/AKfycbyAe1GVZYiZhkgM0_aQCTAG7OdrDDq-_jWszJnkSweC/dev?id='
+    + '<a class="dlink" target="_blank" href="https://script.google.com/macros/s/AKfycbytdaa_yoZtxqMa5Z9v4w_DI5CeYwFiDS8hEYba42K7JfVGHS3q/exec?id='
     + this.gsx$jid.$t + '"><i class="material-icons">search</i></a></div>');
     })
     
